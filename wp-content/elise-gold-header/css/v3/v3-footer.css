@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Elise v3: Luxury Footer & Contact Form 7
+   Scope: body.elise-v3 | Constraint: <= 150 lines
+   ========================================================================== */
+
+/* --- 1. Global Footer Wrapper & Spacing --- */
+body.elise-v3 footer.footer-wrapper {
+  background-color: #0b0a08 !important;
+  color: #d8d3c8;
+}
+body.elise-v3 footer > .section:first-child {
+  background-color: #0b0a08 !important;
+  padding: 60px 0 !important;
+}
+
+/* Ẩn Callout xanh thô kệch phía trên footer bằng structural selector bền vững */
+body.elise-v3 footer > .section:first-child > .section-content > .row:first-of-type,
+body.elise-v3 footer > .section:first-child > .section-content > .gap-element:first-of-type {
+  display: none !important;
+}
+
+/* Đẩy lề trái để cụm 5 nút trôi nổi (#button-contact-vr) không bị đè vào chữ & đồng bộ container 1220px */
+body.elise-v3 footer .section-content {
+  padding-left: 75px !important;
+  padding-right: 75px !important;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  body.elise-v3 footer .section-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* --- 2. Tái cấu trúc 3 Cột Cân Đối (Không phụ thuộc dynamic ID) --- */
+@media (min-width: 850px) {
+  body.elise-v3 footer .row-large {
+    display: flex;
+    align-items: flex-start;
+  }
+  body.elise-v3 footer .row-large > .col:first-child {
+    flex: 0 0 58% !important;
+    max-width: 58% !important;
+  }
+  body.elise-v3 footer .row-large > .col:last-child {
+    flex: 0 0 42% !important;
+    max-width: 42% !important;
+    padding-left: 28px;
+  }
+  body.elise-v3 footer .row-large > .col:first-child .row {
+    display: flex;
+  }
+  body.elise-v3 footer .row-large > .col:first-child .row > .col:first-child {
+    flex: 0 0 54% !important;
+    max-width: 54% !important;
+    padding-right: 18px;
+  }
+  body.elise-v3 footer .row-large > .col:first-child .row > .col:last-child {
+    flex: 0 0 46% !important;
+    max-width: 46% !important;
+  }
+}
+
+body.elise-v3 footer h3,
+body.elise-v3 footer strong {
+  font-family: Georgia, serif;
+  color: #c8a25a !important;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+body.elise-v3 footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0 0;
+}
+body.elise-v3 footer ul li {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: rgba(251, 249, 245, 0.78);
+  margin-bottom: 6px;
+}
+
+/* Bổ sung hiển thị Giờ mở cửa dưới Thông tin liên hệ */
+body.elise-v3 footer .row-large > .col:first-child .row > .col:first-child ul::after {
+  content: "Giờ làm việc: 08:00 – 20:30 (Thứ 2 – CN)";
+  display: block;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: #c8a25a;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* --- 3. Form Đăng Ký Kính Mờ (Glassmorphism & Bỏ ô Email) --- */
+body.elise-v3 footer .row-large > .col:last-child > .col-inner {
+  background: #15130f;
+  border: 1px solid rgba(200, 162, 90, 0.35);
+  border-radius: 16px;
+  padding: 28px 24px 22px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+body.elise-v3 footer .wpcf7-form input[type="text"],
+body.elise-v3 footer .wpcf7-form input[type="tel"],
+body.elise-v3 footer .wpcf7-form select {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(200, 162, 90, 0.3) !important;
+  border-radius: 8px !important;
+  color: #fbf9f5 !important;
+  font-size: 14px !important;
+  padding: 10px 14px !important;
+  height: 44px !important;
+  box-shadow: none !important;
+  margin-bottom: 12px !important;
+}
+
+body.elise-v3 footer .wpcf7-form select option {
+  background: #181612;
+  color: #fbf9f5;
+}
+
+/* Ẩn trường Email để tăng chuyển đổi */
+body.elise-v3 footer .wpcf7-form input[type="email"],
+body.elise-v3 footer .wpcf7-form p:has(input[type="email"]) {
+  display: none !important;
+}
+
+body.elise-v3 footer .wpcf7-submit {
+  background: #c8a25a !important;
+  border: none !important;
+  border-radius: 999px !important;
+  color: #0e0d0b !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  height: 44px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+body.elise-v3 footer .wpcf7-submit:hover {
+  background: #dbb76e !important;
+  transform: translateY(-2px);
+}

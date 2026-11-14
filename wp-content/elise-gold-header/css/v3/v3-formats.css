@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Elise v3: Section 06 (Online), Section 07 (Tại Nhà), Section 08 (Người Lớn)
+   Scope: body.elise-v3 | Constraint: <= 150 lines
+   ========================================================================== */
+
+body.elise-v3 .elise-s06-s07-s08 {
+  background-color: #fbf9f5 !important;
+}
+
+body.elise-v3 .elise-formats-grid {
+  margin-top: 10px;
+}
+
+body.elise-v3 .elise-format-col {
+  padding: 0 12px !important;
+}
+
+body.elise-v3 .elise-format-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(200, 162, 90, 0.35);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(14, 13, 11, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+body.elise-v3 .elise-format-card:hover {
+  transform: translateY(-6px);
+  border-color: #c8a25a;
+  box-shadow: 0 16px 36px rgba(14, 13, 11, 0.08);
+}
+
+body.elise-v3 .elise-format-featured {
+  border-color: rgba(200, 162, 90, 0.7);
+  box-shadow: 0 10px 28px rgba(200, 162, 90, 0.12);
+}
+
+body.elise-v3 .elise-format-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: rgba(14, 13, 11, 0.85);
+  backdrop-filter: blur(6px);
+  color: #c8a25a;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(200, 162, 90, 0.35);
+}
+
+body.elise-v3 .elise-format-badge-gold {
+  background: #c8a25a !important;
+  color: #0e0d0b !important;
+}
+
+body.elise-v3 .elise-format-media img {
+  width: 100%;
+  height: 190px !important;
+  object-fit: cover;
+}
+
+body.elise-v3 .elise-format-video-preview {
+  height: 190px;
+  overflow: hidden;
+  background: #000;
+}
+
+body.elise-v3 .elise-format-body {
+  padding: 24px 22px 26px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body.elise-v3 .elise-format-body h3 {
+  font-family: Georgia, serif;
+  font-size: 19px !important;
+  color: #161513 !important;
+  margin-bottom: 6px;
+}
+
+body.elise-v3 .elise-format-target {
+  color: #c8a25a !important;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+body.elise-v3 .elise-format-body p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #555047;
+  margin-bottom: 16px;
+}
+
+body.elise-v3 .elise-format-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex: 1 1 auto;
+}
+
+body.elise-v3 .elise-format-list li {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #605a52;
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 4px;
+}
+
+body.elise-v3 .elise-format-list li::before {
+  content: "•";
+  color: #c8a25a;
+  position: absolute;
+  left: 4px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body.elise-v3 .elise-format-link {
+  color: #c8a25a !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: letter-spacing 0.2s ease;
+}
+
+body.elise-v3 .elise-format-link:hover {
+  letter-spacing: 0.04em;
+  color: #b0893f !important;
+}

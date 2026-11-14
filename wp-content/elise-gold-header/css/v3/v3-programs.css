@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Elise v3: Section 04 (Lớp 4 Tuổi) & Section 05 (Luyện Thi AMEB)
+   Scope: body.elise-v3 | Constraint: <= 150 lines
+   ========================================================================== */
+
+/* --- Section 04 Lớp Piano 4 Tuổi --- */
+body.elise-v3 .elise-s04 {
+  background-color: #fbf9f5 !important;
+}
+
+body.elise-v3 .elise-s04-golden-time { color: #c8a25a; font-size: 16px; line-height: 1.6; margin: 14px 0; }
+body.elise-v3 .elise-s04-desc { color: #555047; font-size: 14.5px; line-height: 1.7; margin-bottom: 22px; }
+
+body.elise-v3 .elise-s04-feat-box {
+  background: #ffffff;
+  border: 1px solid rgba(200, 162, 90, 0.35);
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+body.elise-v3 .elise-s04-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(200, 162, 90, 0.3) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.25s ease;
+}
+
+body.elise-v3 .elise-s04-card:hover {
+  transform: translateY(-4px);
+}
+
+body.elise-v3 .elise-s04-card-media {
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  background-color: transparent !important;
+}
+
+body.elise-v3 .elise-s04-card-media .img,
+body.elise-v3 .elise-s04-card-media .img-inner {
+  width: 100% !important;
+  height: 180px !important;
+  background-color: transparent !important;
+  overflow: hidden !important;
+}
+
+body.elise-v3 .elise-s04-card-media img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.35s ease;
+}
+
+body.elise-v3 .elise-s04-card:hover .elise-s04-card-media img {
+  transform: scale(1.05);
+}
+
+body.elise-v3 .elise-s04-card-copy {
+  display: block !important;
+  flex: 1 1 auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 18px 20px 22px !important;
+  background: #ffffff !important;
+}
+
+body.elise-v3 .elise-s04-card-copy p {
+  display: block !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  color: #555047 !important;
+  margin: 0 !important;
+}
+
+body.elise-v3 .elise-s04-card-copy p.elise-v3-gold-title {
+  display: block !important;
+  color: #c8a25a !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.1em !important;
+  margin-bottom: 8px !important;
+}
+
+/* --- Section 05 Luyện Thi AMEB --- */
+body.elise-v3 .elise-s05 { background-color: #0e0d0b !important; }
+
+body.elise-v3 .elise-s05-banner-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 162, 90, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  margin-bottom: 14px;
+}
+
+body.elise-v3 .elise-s05-hero-img img {
+  width: 100%;
+  height: 220px !important;
+  object-fit: cover;
+}
+
+body.elise-v3 .elise-s05-sub-img img {
+  border-radius: 12px;
+  width: 100%;
+  height: 110px !important;
+  object-fit: cover;
+  border: 1px solid rgba(200, 162, 90, 0.25);
+}
+
+body.elise-v3 .elise-s05-img-cap {
+  font-size: 11.5px;
+  color: rgba(251, 249, 245, 0.7);
+  margin-top: 6px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+body.elise-v3 .elise-s05-article h3 { font-family: Georgia, serif; font-size: 26px !important; color: #fbf9f5 !important; margin-bottom: 16px; }
+body.elise-v3 .elise-s05-article p { color: rgba(251, 249, 245, 0.8); font-size: 14.5px; line-height: 1.75; margin-bottom: 14px; }
+
+body.elise-v3 .elise-s05-exam-list {
+  background: #181612;
+  border: 1px solid rgba(200, 162, 90, 0.3);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-top: 18px;
+}
+
+body.elise-v3 .elise-s05-exam-item { font-size: 13.5px; line-height: 1.6; color: rgba(251, 249, 245, 0.85); margin-bottom: 8px; }
+body.elise-v3 .elise-s05-exam-item:last-child { margin-bottom: 0; }
+body.elise-v3 .elise-s05-exam-item strong { color: #c8a25a; }

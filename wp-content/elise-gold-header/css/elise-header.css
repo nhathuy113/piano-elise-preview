@@ -1,0 +1,931 @@
+/**
+ * Piano Elise — chrome header giống mockup (hero + contact).
+ * Flatsome tô nền header qua .header-bg-color.fill
+ */
+
+:root {
+  --elise-gold-1: #7a5c22;
+  --elise-gold-2: #c4a035;
+  --elise-gold-3: #f3e4b0;
+  --elise-gold-4: #c9a84c;
+  --elise-ink: #1a1208;
+  --elise-topbar: #0a0a0a;
+}
+
+.header-bg-color.fill {
+  background-color: #b8923a !important;
+  background-image:
+    linear-gradient(
+      105deg,
+      #7a5c22 0%,
+      #c4a035 16%,
+      #f3e4b0 30%,
+      #c9a84c 46%,
+      #ead38a 60%,
+      #a67c2a 78%,
+      #d4af5a 100%
+    ) !important;
+  background-size: 160% 100%;
+  background-position: center;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 248, 220, 0.4),
+    inset 0 -1px 0 rgba(70, 45, 10, 0.28);
+}
+
+.header.transparent .header-wrapper:not(.stuck) .header-bg-color.fill,
+.has-transparent.transparent .header-wrapper:not(.stuck) .header-bg-color.fill {
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none;
+  opacity: 0 !important;
+}
+
+#header.transparent .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link {
+  color: #f4f0e6 !important;
+}
+
+#header.transparent .header-wrapper:not(.stuck) .header-main .icon-search,
+#header.transparent .header-wrapper:not(.stuck) .header-main .icon-menu {
+  color: #f4f0e6 !important;
+}
+
+.header-wrapper.stuck .header-bg-color.fill {
+  opacity: 1;
+}
+
+.header:not(.transparent) .header-main,
+.header-wrapper.stuck .header-main {
+  background: transparent !important;
+}
+
+/* Top bar: mockup đen, chữ vàng — đè #0237ab !important của Flatsome */
+#top-bar.header-top {
+  background-color: var(--elise-topbar) !important;
+  background-image: none !important;
+}
+
+#top-bar.header-top a,
+#top-bar.header-top span,
+#top-bar.header-top i,
+#top-bar.header-top .uppercase {
+  color: #e8d5a3 !important;
+}
+
+#top-bar.header-top a:hover,
+#top-bar.header-top a:hover span,
+#top-bar.header-top a:hover i {
+  color: #f3e4b0 !important;
+}
+
+/* Menu trên nền vàng: chữ đen, hover vàng đậm — không xanh Flatsome */
+.header:not(.transparent) .header-nav-main.nav > li > a {
+  color: var(--elise-ink) !important;
+}
+
+.header:not(.transparent) .header-nav-main.nav > li > a:hover,
+.header:not(.transparent) .header-nav-main.nav > li.active > a,
+.header:not(.transparent) .header-nav-main.nav > li.current > a,
+.header:not(.transparent) .header-nav-main.nav > li > a.active,
+.header:not(.transparent) .header-nav-main.nav > li > a.current,
+.header-nav-main.nav-line-bottom > li > a:before,
+.header-nav-main.nav-line-grow > li > a:before,
+.header-nav-main.nav-line > li > a:before,
+.header-nav-main.nav-box > li > a:hover,
+.header-nav-main.nav-box > li.active > a,
+.header-nav-main.nav-pills > li > a:hover,
+.header-nav-main.nav-pills > li.active > a {
+  color: #5c3d0e !important;
+  background-color: transparent !important;
+}
+
+.header:not(.transparent) .header-main .icon-search,
+.header:not(.transparent) .header-main .icon-shopping-bag,
+.header:not(.transparent) .header-main .icon-shopping-cart {
+  color: var(--elise-ink) !important;
+}
+
+/* Mockup không có giỏ hàng / search trên header */
+.header-main .header-cart-link,
+.header-main .cart-item,
+.header-main .header-search {
+  display: none !important;
+}
+
+/* Max Mega Menu: bỏ viên trắng (pill) */
+#mega-menu-wrap-primary,
+#mega-menu-wrap-primary .mega-menu {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary {
+  background: transparent !important;
+}
+
+#mega-menu-wrap-primary .mega-menu-link {
+  color: var(--elise-ink) !important;
+  background: transparent !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em;
+}
+
+#mega-menu-wrap-primary .mega-menu-link:hover,
+#mega-menu-wrap-primary .mega-current-menu-item > .mega-menu-link {
+  color: #5c3d0e !important;
+  background: transparent !important;
+}
+
+#top-bar .account-item,
+#top-bar .menu-item-gtranslate,
+#top-bar .header-social-icons {
+  display: none !important;
+}
+
+.elise-hero-title {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+  line-height: 1.15 !important;
+  color: #fff !important;
+  margin: 0.25em 0 0.4em !important;
+}
+
+body.elise-v2-1 h1.elise-hero-title {
+  font-size: clamp(1.65rem, 1.15rem + 1.35vw, 2.25rem) !important;
+  line-height: 1.22 !important;
+}
+
+.elise-hero-title em {
+  font-style: italic;
+  background: linear-gradient(105deg, #c4a035, #f3e4b0, #c9a84c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Transparent + chưa scroll: menu trắng (rule này phải đứng sau màu đen Mega Menu) */
+#header.transparent .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link {
+  color: #f4f0e6 !important;
+}
+
+#header.transparent .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link:hover {
+  color: #f3e4b0 !important;
+}
+
+#header.transparent .header-wrapper:not(.stuck) .header-main .icon-menu {
+  color: #f4f0e6 !important;
+}
+
+/*
+ * /trang-chu-v2 — header cũ (xám khói / chữ trắng / CTA vàng)
+ *
+body.elise-v2 #logo {
+  width: auto !important;
+  max-width: 46vw;
+}
+body.elise-v2 #logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+body.elise-v2 #logo img { display: none !important; }
+body.elise-v2 #logo img.header_logo {
+  display: block !important;
+  max-height: 56px;
+  width: auto !important;
+  height: auto !important;
+}
+body.elise-v2 #logo a::before { content: none !important; display: none !important; }
+body.elise-v2 #logo a::after {
+  content: "ĐÚNG THỜI ĐIỂM - ĐÚNG PHƯƠNG PHÁP - ĐÚNG LỘ TRÌNH";
+  display: block;
+  color: #fff !important;
+  font-size: 6.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  white-space: nowrap;
+  margin-left: 62px;
+  margin-top: -16px;
+  text-transform: uppercase;
+}
+body.elise-v2 .header-bg-color.fill {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none;
+  opacity: 0 !important;
+}
+body.elise-v2 #header.transparent .header-wrapper:not(.stuck) .header-bg-color.fill,
+body.elise-v2.has-transparent.transparent .header-wrapper:not(.stuck) .header-bg-color.fill {
+  background-color: transparent !important;
+  background-image: none !important;
+  opacity: 0 !important;
+}
+body.elise-v2 .header-wrapper.stuck .header-bg-color.fill {
+  background-color: rgba(22, 20, 18, 0.78) !important;
+  background-image: none !important;
+  opacity: 1 !important;
+}
+body.elise-v2 .header-wrapper { background: transparent !important; }
+body.elise-v2 #top-bar.header-top {
+  background-color: rgba(14, 13, 11, 0.72) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+body.elise-v2 .header-main,
+body.elise-v2 .header-wrapper .header-bg-color,
+body.elise-v2 .header-wrapper .header-bg-image {
+  background: rgba(12, 11, 9, 0.55) !important;
+  background-image: none !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+body.elise-v2 .header-nav-main.nav > li > a,
+body.elise-v2 #header .header-nav-main.nav > li > a {
+  color: #f3ece1 !important;
+}
+body.elise-v2 #top-bar .container,
+body.elise-v2 .header-main .header-inner {
+  max-width: 1180px;
+  width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+body.elise-v2 .header-main .header-inner {
+  min-height: 76px;
+  align-items: center;
+  justify-content: flex-start !important;
+}
+body.elise-v2 .header-main .flex-col { display: flex; align-items: center; }
+body.elise-v2 .header-main .flex-col.logo { margin-right: auto !important; }
+body.elise-v2 .header-main .hide-for-medium.flex-left.flex-grow {
+  flex-grow: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.elise-v2 .header-main .hide-for-medium.flex-right { margin-left: 22px !important; }
+body.elise-v2 .header-nav-main.nav-left {
+  display: flex;
+  width: auto;
+  justify-content: flex-end;
+  align-items: center;
+  white-space: nowrap;
+}
+body.elise-v2 #mega-menu-wrap-primary { width: auto !important; }
+body.elise-v2 #top-bar.header-top a,
+body.elise-v2 #top-bar.header-top span,
+body.elise-v2 #top-bar.header-top i,
+body.elise-v2 #top-bar.header-top .uppercase {
+  color: #e8d5a3 !important;
+  font-weight: 400;
+  text-transform: none !important;
+  letter-spacing: 0.02em;
+  font-size: 13px;
+}
+body.elise-v2 #top-bar.header-top a:hover,
+body.elise-v2 #top-bar.header-top a:hover span,
+body.elise-v2 #top-bar.header-top a:hover i { color: #f3e4b0 !important; }
+body.elise-v2 #top-bar .flex-right,
+body.elise-v2 #top-bar .flex-center,
+body.elise-v2 #top-bar .html_topbar_left { display: none !important; }
+body.elise-v2 #top-bar .flex-left { flex: 1 1 100%; max-width: 100%; }
+body.elise-v2 #top-bar .header-contact-wrapper,
+body.elise-v2 #header-contact { display: flex !important; width: 100%; align-items: center; }
+body.elise-v2 #header-contact.nav-divided > li { border: 0 !important; }
+body.elise-v2 #header-contact > li:first-child::after {
+  content: "·";
+  margin: 0 12px;
+  color: #c8a25a;
+  font-weight: 400;
+}
+body.elise-v2 #header-contact > li:last-child { margin-left: auto; }
+body.elise-v2 .header-main .header-divider { display: none !important; }
+body.elise-v2 .header-main .flex-col.medium-logo-center,
+body.elise-v2 .header-main .flex-col.hide-for-medium {
+  align-items: center !important;
+  height: auto !important;
+}
+body.elise-v2 #mega-menu-wrap-primary,
+body.elise-v2 #mega-menu-wrap-primary #mega-menu-primary,
+body.elise-v2 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item {
+  display: flex !important;
+  align-items: center !important;
+  height: auto !important;
+  line-height: 1 !important;
+}
+body.elise-v2 #mega-menu-wrap-primary #mega-menu-primary { gap: 22px; }
+body.elise-v2 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link,
+body.elise-v2 #header.transparent .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link,
+body.elise-v2 .header-wrapper.stuck #mega-menu-wrap-primary .mega-menu-link {
+  color: #fbf8f2 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  font-size: 15px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 42px !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: transparent !important;
+  white-space: nowrap !important;
+}
+body.elise-v2 #mega-menu-wrap-primary .mega-menu-link:hover { color: #e8d5a3 !important; }
+body.elise-v2 #mega-menu-wrap-primary .mega-indicator { display: none !important; }
+body.elise-v2 .header-button-1 { margin-left: 22px; display: flex; align-items: center; }
+body.elise-v2 .header-button-1 .button,
+body.elise-v2 .header-button-1 a.button {
+  background: #c8a25a !important;
+  color: #0c0b09 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  padding: 0 22px !important;
+  line-height: 42px !important;
+  height: 42px !important;
+  min-height: 42px;
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 14px !important;
+  white-space: nowrap;
+}
+body.elise-v2 #button-contact-vr { display: none !important; }
+ */
+
+/* /trang-chu-v2 — header vàng nhũ như screenshot 2026-08-19 */
+body.elise-v2 .header-bg-color.fill {
+  background-color: #b8923a !important;
+  background-image:
+    linear-gradient(
+      105deg,
+      #7a5c22 0%,
+      #c4a035 16%,
+      #f3e4b0 30%,
+      #c9a84c 46%,
+      #ead38a 60%,
+      #a67c2a 78%,
+      #d4af5a 100%
+    ) !important;
+  background-size: 160% 100%;
+  background-position: center;
+  opacity: 1 !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 248, 220, 0.4),
+    inset 0 -1px 0 rgba(70, 45, 10, 0.28);
+}
+
+body.elise-v2 .header-wrapper,
+body.elise-v2 .header-main {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 0 !important;
+}
+
+body.elise-v2 .header-main .header-inner {
+  min-height: 72px;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+body.elise-v2 .header-main .flex-col {
+  display: flex;
+  align-items: center !important;
+}
+
+body.elise-v2 .header-main .flex-col.logo {
+  margin-right: auto !important;
+}
+
+body.elise-v2 .header-main .hide-for-medium.flex-left.flex-grow {
+  flex-grow: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body.elise-v2 .header-nav-main.nav-left {
+  display: flex;
+  width: auto;
+  justify-content: flex-end;
+  align-items: center;
+  white-space: nowrap;
+}
+
+body.elise-v2 .header-main .hide-for-medium.flex-right {
+  margin-left: 0 !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+}
+
+body.elise-v2 #mega-menu-wrap-primary {
+  width: auto !important;
+}
+
+body.elise-v2 #logo img.header-logo-dark,
+body.elise-v2 #logo img.header-logo-sticky {
+  display: none !important;
+}
+
+body.elise-v2 #logo img.header_logo,
+body.elise-v2 #logo img.header-logo {
+  display: block !important;
+  max-height: 75px;
+  width: auto !important;
+  height: auto !important;
+}
+
+body.elise-v2 .header-button-1 {
+  display: none !important;
+}
+
+body.elise-v2 #mega-menu-wrap-primary,
+body.elise-v2 #mega-menu-wrap-primary #mega-menu-primary,
+body.elise-v2 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item {
+  display: flex !important;
+  align-items: center !important;
+  height: auto !important;
+}
+
+body.elise-v2 #mega-menu-wrap-primary #mega-menu-primary {
+  gap: 28px;
+}
+
+body.elise-v2 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link,
+body.elise-v2 #header.transparent .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link,
+body.elise-v2 .header-wrapper.stuck #mega-menu-wrap-primary .mega-menu-link {
+  color: #1a1208 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: transparent !important;
+  white-space: nowrap !important;
+}
+
+body.elise-v2 #mega-menu-wrap-primary .mega-menu-link:hover,
+body.elise-v2 #mega-menu-wrap-primary .mega-current-menu-item > .mega-menu-link {
+  color: #5c3d0e !important;
+}
+
+body.elise-v2:not(.elise-v2-1) #button-contact-vr {
+  display: none !important;
+}
+
+/* --- Tinh chỉnh Cụm Nút Liên Hệ Trôi Nổi (#button-contact-vr) Tinh Tế, Nhỏ Gọn --- */
+#button-contact-vr {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 14px !important;
+  z-index: 99999 !important;
+}
+
+#button-contact-vr .button-contact {
+  margin-top: 4px !important;
+}
+
+#button-contact-vr .button-contact .phone-vr {
+  width: 46px !important;
+  height: 46px !important;
+}
+
+#button-contact-vr .phone-vr-circle-fill {
+  width: 42px !important;
+  height: 42px !important;
+  top: 2px !important;
+  left: 2px !important;
+  opacity: 0.45 !important;
+}
+
+#button-contact-vr .phone-vr-img-circle {
+  width: 34px !important;
+  height: 34px !important;
+  top: 6px !important;
+  left: 6px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+#button-contact-vr .phone-vr-img-circle img {
+  max-height: 18px !important;
+  max-width: 18px !important;
+}
+
+/* Ẩn triệt để thanh ngang đỏ phone-bar (thò ngang 180px che card/hình) */
+#button-contact-vr .phone-bar,
+#button-contact-vr .phone-bar a,
+.phone-bar,
+.phone-bar a {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Định vị cụm nút liên hệ gọn gàng sát mép trái, không đè nội dung */
+#button-contact-vr {
+  left: 0 !important;
+  z-index: 999 !important;
+  transform: scale(0.72) !important;
+  transform-origin: bottom left !important;
+}
+
+/* --- Safe Gutters cho các trang con & bài viết (Giới thiệu, Khóa học, Liên hệ, Tin tức) --- */
+#main .page-wrapper > .row,
+#main .blog-wrapper > .row,
+#main .content-area > .row {
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 850px) {
+  #main .page-wrapper > .row,
+  #main .blog-wrapper > .row,
+  #main .content-area > .row {
+    padding-left: 64px;
+    padding-right: 48px;
+  }
+}
+
+/* /trang-chu-v2-1 — menu trong suốt; scroll (stuck) glide sang vàng nhũ */
+body.elise-v2-1 .header-bg-color.fill {
+  transition: opacity 0.45s ease, background-color 0.45s ease;
+}
+
+body.elise-v2-1 .header-wrapper:not(.stuck) .header-bg-color.fill,
+body.elise-v2-1 #header.transparent .header-wrapper:not(.stuck) .header-bg-color.fill {
+  background-color: transparent !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  box-shadow: none;
+}
+
+body.elise-v2-1 .header-wrapper.stuck .header-bg-color.fill {
+  opacity: 1 !important;
+}
+
+body.elise-v2-1 .header-wrapper:not(.stuck) #top-bar.header-top {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body.elise-v2-1 .header-wrapper:not(.stuck) .header-main {
+  background: rgba(12, 11, 9, 0.92) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Header trong suốt: chừa dải đen phía trên hero = chiều cao header (ảnh không chui lên menubar). */
+body.elise-v2-1 {
+  --elise-header-h: 90px;
+}
+
+@media (min-width: 1025px) {
+  body.elise-v2-1 {
+    --elise-header-h: 120px;
+  }
+}
+
+body.elise-v2-1 #main .content-area > .section:first-of-type {
+  padding-top: var(--elise-header-h) !important;
+  background-color: #000 !important;
+}
+
+body.elise-v2-1 .banner.elise-hero-right .text-box {
+  top: 0 !important;
+  bottom: auto !important;
+  transform: none !important;
+  margin-top: 0 !important;
+  padding-top: 40px !important;
+}
+
+body.elise-v2-1 .header-wrapper.stuck #top-bar.header-top,
+body.elise-v2-1 .header-wrapper.stuck .header-main {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body.elise-v2-1 #header.transparent .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link,
+body.elise-v2-1 .header-wrapper:not(.stuck) #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+  color: #fbf8f2 !important;
+}
+
+body.elise-v2-1 .header-wrapper.stuck #mega-menu-wrap-primary .mega-menu-link,
+body.elise-v2-1 .header-wrapper.stuck #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+  color: #f4f0e6 !important;
+}
+
+body.elise-v2-1 .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link:hover {
+  color: #e8d5a3 !important;
+}
+
+/* Mockup hero: ảnh full bên phải, fade mềm sang trái — không cắt cột 50/50 */
+body.elise-v2 .banner.elise-hero-right {
+  background-color: #000 !important;
+}
+
+body.elise-v2:not(.elise-v2-1) .banner.elise-hero-right .banner-bg .bg,
+body.elise-v2:not(.elise-v2-1) .banner.elise-hero-right .banner-bg .bg.bg-fill,
+body.elise-v2:not(.elise-v2-1) .banner.elise-hero-right .bg.bg-loaded {
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  background-image: url("wp-content/uploads/2025/08/IMG_4905.jpeg") !important;
+  background-size: cover !important;
+  background-position: 92% 42% !important;
+  background-repeat: no-repeat !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+body.elise-v2-1 .banner.elise-hero-right .banner-bg .bg,
+body.elise-v2-1 .banner.elise-hero-right .banner-bg .bg.bg-fill,
+body.elise-v2-1 .banner.elise-hero-right .bg.bg-loaded {
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  background-image: url("wp-content/uploads/2025/08/IMG_4905.jpeg") !important;
+  background-size: cover !important;
+  background-position: 12% 50% !important;
+  background-repeat: no-repeat !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* Hero v2.1: mobile/tablet full bleed; inset trái chỉ desktop (tránh cột hẹp + nền beige lộ bên phải). */
+body.elise-v2-1 .banner.elise-hero-right {
+  max-width: none;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  overflow: hidden;
+  border-radius: 0;
+  border-top: 0 !important;
+  box-shadow: none !important;
+}
+
+@media (min-width: 1025px) {
+  body.elise-v2-1 .banner.elise-hero-right {
+    width: calc(100% - max(20px, (100% - 1180px) / 2));
+    margin-left: max(20px, calc((100% - 1180px) / 2));
+  }
+}
+
+@media (max-width: 1024px) {
+  body.elise-v2-1 #wrapper,
+  body.elise-v2-1 #main,
+  body.elise-v2-1 #main .content-area,
+  body.elise-v2-1 #main .content-area > .section:first-of-type,
+  body.elise-v2-1 #main .content-area > .section:first-of-type > .section-content,
+  body.elise-v2-1 #header,
+  body.elise-v2-1 .header-wrapper,
+  body.elise-v2-1 .header-main {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  body.elise-v2-1 .banner.elise-hero-right .banner-inner,
+  body.elise-v2-1 .banner.elise-hero-right .banner-bg,
+  body.elise-v2-1 .banner.elise-hero-right .banner-layers,
+  body.elise-v2-1 .banner.elise-hero-right .banner-layers.container {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.elise-v2-1 .banner.elise-hero-right .text-box a.elise-btn-gold,
+  body.elise-v2-1 .banner.elise-hero-right .text-box a.elise-btn-gold-outline {
+    min-width: 0 !important;
+    white-space: normal !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 849px) {
+  body.elise-v2-1 .banner.elise-hero-right .text-box {
+    width: 92% !important;
+    max-width: 92% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  body.elise-v2-1 .banner.elise-hero-right .text-box a.elise-btn-gold,
+  body.elise-v2-1 .banner.elise-hero-right .text-box a.elise-btn-gold-outline {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    justify-content: center;
+    margin-right: 0 !important;
+  }
+
+  body.elise-v2-1 .elise-stats .row > .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  body.elise-v2-1 .elise-stats .row-divided > .col + .col::before {
+    display: none;
+  }
+}
+
+body.elise-v2 .banner.elise-hero-right .overlay {
+  display: block !important;
+  opacity: 1 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    90deg,
+    rgb(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.92) 18%,
+    rgba(0, 0, 0, 0.55) 34%,
+    rgba(0, 0, 0, 0.18) 50%,
+    rgba(0, 0, 0, 0) 64%
+  ) !important;
+}
+
+body.elise-v2-1 .banner.elise-hero-right .overlay {
+  background-image: linear-gradient(
+      180deg,
+      rgb(0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.55) 12%,
+      rgba(0, 0, 0, 0.2) 26%,
+      rgba(0, 0, 0, 0) 42%
+    ),
+    linear-gradient(
+      90deg,
+      rgb(0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.55) 10%,
+      rgba(0, 0, 0, 0.2) 24%,
+      rgba(0, 0, 0, 0) 38%
+    ) !important;
+  background-size: 100% 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+body.elise-v2 .banner.elise-hero-right .text-box {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
+}
+
+body.elise-v2 .banner.elise-hero-right .text-box .button {
+  display: inline-flex !important;
+  align-items: center;
+  margin: 10px 12px 0 0 !important;
+}
+body.elise-v2 .elise-piano-keys-wrap .section-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.elise-v2 .elise-piano-keys {
+  height: 40px;
+  width: 100%;
+  background-color: #111;
+  background-image:
+    linear-gradient(180deg, #f3e4b0 0%, #c9a84c 45%, #7a5c22 100%),
+    linear-gradient(#111, #111),
+    linear-gradient(#111, #111),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 18px,
+      #111 18px 30px,
+      transparent 30px 42px,
+      #111 42px 54px,
+      transparent 54px 90px,
+      #111 90px 102px,
+      transparent 102px 114px,
+      #111 114px 126px,
+      transparent 126px 138px,
+      #111 138px 150px,
+      transparent 150px 168px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #e4d2b8 0 23px,
+      #1a1510 23px 24px
+    );
+  background-size: 100% 3px, 6px 100%, 6px 100%, 168px 18px, 24px 28px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat-x, repeat-x;
+  background-position: 0 0, 0 0, 100% 0, 0 12px, 0 12px;
+}
+
+body.elise-v2 .elise-stats .row-divided > .col {
+  position: relative;
+}
+
+body.elise-v2 .elise-stats .row-divided > .col + .col {
+  border-left: 0 !important;
+}
+
+body.elise-v2 .elise-stats .row-divided > .col + .col::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16%;
+  height: 68%;
+  width: 1px;
+  background: rgb(45, 42, 38);
+}
+
+body.elise-v2 .elise-stat h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #c5a059 !important;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0 0 10px;
+}
+
+body.elise-v2 .elise-stat h3::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  margin: 10px auto 0;
+  background: #c5a059;
+}
+
+body.elise-v2 .elise-stat p {
+  color: #e6e1d8 !important;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+@media (max-width: 848px) {
+  body.elise-v2 .elise-stats .row-divided > .col + .col::before {
+    display: none;
+  }
+}
+
+body.elise-v2 .button.elise-btn-gold,
+body.elise-v2 a.button.elise-btn-gold {
+  background: linear-gradient(105deg, #c4a035, #e8d5a3, #c5a059) !important;
+  color: #111 !important;
+  border: 0 !important;
+}
+
+body.elise-v2:not(.elise-v2-1) .banner.elise-hero-right .text-box a.elise-btn-gold {
+  min-width: 340px;
+  justify-content: center;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+  white-space: nowrap;
+}
+
+body.elise-v2-1 .banner.elise-hero-right .text-box a.elise-btn-gold {
+  justify-content: center;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+}
+
+@media (min-width: 1025px) {
+  body.elise-v2-1 .banner.elise-hero-right .text-box a.elise-btn-gold {
+    min-width: 340px;
+    white-space: nowrap;
+  }
+}
+
+body.elise-v2 .banner.elise-hero-right .text-box a.elise-btn-gold br {
+  display: none;
+}
+
+body.elise-v2 .button.elise-btn-gold-outline,
+body.elise-v2 a.button.is-outline.elise-btn-gold-outline {
+  background: transparent !important;
+  border: 1px solid #c5a059 !important;
+  color: #c5a059 !important;
+}

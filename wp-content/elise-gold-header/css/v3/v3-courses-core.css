@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Elise v3: Section 10 (Bộ Môn Piano - Các Khoá Học Cốt Lõi)
+   Scope: body.elise-v3 | Constraint: <= 150 lines
+   ========================================================================== */
+
+body.elise-v3 .elise-s10 {
+  background-color: #0e0d0b !important;
+  border-top: 1px solid rgba(200, 162, 90, 0.15);
+  border-bottom: 1px solid rgba(200, 162, 90, 0.15);
+}
+
+body.elise-v3 .elise-s10-card {
+  background: #181612;
+  border: 1px solid rgba(200, 162, 90, 0.28);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.elise-v3 .elise-s10-card:hover {
+  transform: translateY(-5px);
+  border-color: #c8a25a;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+body.elise-v3 .elise-s10-media {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+body.elise-v3 .elise-s10-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+body.elise-v3 .elise-s10-card:hover .elise-s10-media img {
+  transform: scale(1.05);
+}
+
+body.elise-v3 .elise-s10-body {
+  padding: 20px 18px 24px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body.elise-v3 .elise-s10-body h3 {
+  font-family: Georgia, serif;
+  font-size: 16px !important;
+  color: #fbf9f5 !important;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+body.elise-v3 .elise-s10-body p {
+  color: rgba(251, 249, 245, 0.75);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+body.elise-v3 .elise-s10-video-box {
+  margin-top: 40px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 162, 90, 0.3);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.elise-v3 .elise-s10-video-cap {
+  text-align: center;
+  margin-top: 12px;
+  color: rgba(251, 249, 245, 0.7);
+  font-size: 13px;
+  font-style: italic;
+}

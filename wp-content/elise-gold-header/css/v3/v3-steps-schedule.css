@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Elise v3: Section 09 (Tuyển Sinh 4 Bước) & Section 11 (Thời Khóa Biểu)
+   Scope: body.elise-v3 | Constraint: <= 150 lines
+   ========================================================================== */
+
+/* --- Section 09 Tuyển Sinh 4 Bước --- */
+body.elise-v3 .elise-s09 {
+  background-color: #12110e !important;
+}
+
+body.elise-v3 .elise-s09-card {
+  background: #1a1814;
+  border: 1px solid rgba(200, 162, 90, 0.25);
+  border-radius: 14px;
+  padding: 30px 22px 26px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+body.elise-v3 .elise-s09-card:hover {
+  transform: translateY(-4px);
+  border-color: #c8a25a;
+}
+
+body.elise-v3 .elise-s09-num {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #c8a25a;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+}
+
+body.elise-v3 .elise-s09-card h3 {
+  font-family: Georgia, serif;
+  font-size: 16.5px !important;
+  color: #fbf9f5 !important;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+body.elise-v3 .elise-s09-card p {
+  color: rgba(251, 249, 245, 0.75);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Section 11 Thời Khóa Biểu --- */
+body.elise-v3 .elise-v3-schedule-sec {
+  background-color: #fbf9f5 !important;
+}
+
+body.elise-v3 .elise-v3-sched-card {
+  background: #ffffff;
+  border: 1px solid rgba(200, 162, 90, 0.3);
+  border-radius: 14px;
+  padding: 28px 20px 24px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(14, 13, 11, 0.04);
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.elise-v3 .elise-v3-sched-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(14, 13, 11, 0.08);
+}
+
+body.elise-v3 .elise-v3-sched-num {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  color: #c8a25a;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+body.elise-v3 .elise-v3-sched-card h4 {
+  font-size: 16px !important;
+  color: #161513 !important;
+  margin-bottom: 8px !important;
+  font-weight: 600;
+}
+
+body.elise-v3 .elise-v3-sched-val {
+  font-size: 15px !important;
+  font-weight: 700;
+  color: #c8a25a !important;
+  margin-bottom: 8px !important;
+}
+
+body.elise-v3 .elise-v3-sched-note {
+  font-size: 12.5px !important;
+  line-height: 1.55;
+  color: #70685c !important;
+  margin: 0;
+}

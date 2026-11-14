@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Elise v3: Header, Clean Topbar & Piano Keys Divider
+   Scope: body.elise-v3 | Constraint: <= 150 lines
+   ========================================================================== */
+
+/* --- Topbar: Chữ vàng nhũ, bỏ Login/Register & căn chỉnh 2 bên --- */
+body.elise-v3 #top-bar.header-top a,
+body.elise-v3 #top-bar.header-top span,
+body.elise-v3 #top-bar.header-top i,
+body.elise-v3 #top-bar.header-top .uppercase {
+  color: #e8d5a3 !important;
+  font-weight: 400;
+  text-transform: none !important;
+  letter-spacing: 0.02em;
+  font-size: 13px;
+}
+
+body.elise-v3 #top-bar.header-top a:hover,
+body.elise-v3 #top-bar.header-top a:hover span,
+body.elise-v3 #top-bar.header-top a:hover i {
+  color: #f3e4b0 !important;
+}
+
+/* Ẩn chữ thừa: Login/Register, Welcome text & pipes */
+body.elise-v3 #top-bar .flex-right,
+body.elise-v3 #top-bar .flex-center,
+body.elise-v3 #top-bar .html_topbar_left {
+  display: none !important;
+}
+
+body.elise-v3 #top-bar .flex-left {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+body.elise-v3 #top-bar .header-contact-wrapper,
+body.elise-v3 #header-contact {
+  display: flex !important;
+  width: 100%;
+  align-items: center;
+}
+
+body.elise-v3 #header-contact.nav-divided > li {
+  border: 0 !important;
+}
+
+body.elise-v3 #header-contact > li:first-child::after {
+  content: none !important;
+}
+
+body.elise-v3 #header-contact > li:last-child {
+  margin-left: auto;
+}
+
+/* --- Logo: Kích thước chuẩn & slogan sắc nét từ file gốc --- */
+body.elise-v3 #logo img.header-logo-dark,
+body.elise-v3 #logo img.header-logo-sticky {
+  display: none !important;
+}
+
+body.elise-v3 #logo img.header_logo,
+body.elise-v3 #logo img.header-logo {
+  display: block !important;
+  max-height: 75px;
+  width: auto !important;
+  height: auto !important;
+}
+
+body.elise-v3 #logo a::before,
+body.elise-v3 #logo a::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.elise-v3 .header-button-1 {
+  display: none !important;
+}
+
+/* --- Header Nền Tối / Trong Suốt chìm vào Hero đen như v2.1 --- */
+body.elise-v3 .header-wrapper:not(.stuck) .header-main {
+  background: rgba(12, 11, 9, 0.94) !important;
+  border-bottom: 0 !important;
+}
+
+body.elise-v3 .header-wrapper:not(.stuck) #top-bar.header-top {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+}
+
+body.elise-v3 .header.transparent .header-wrapper:not(.stuck) .header-bg-color.fill,
+body.elise-v3 .has-transparent.transparent .header-wrapper:not(.stuck) .header-bg-color.fill {
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+body.elise-v3 #header.transparent .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link,
+body.elise-v3 #header.transparent .header-wrapper:not(.stuck) .header-nav-main.nav > li > a {
+  color: #f4f0e6 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em;
+}
+
+body.elise-v3 #header.transparent .header-wrapper:not(.stuck) #mega-menu-wrap-primary .mega-menu-link:hover,
+body.elise-v3 #header.transparent .header-wrapper:not(.stuck) .header-nav-main.nav > li > a:hover {
+  color: #c5a059 !important;
+}
+
+/* --- Dải Phím Đàn (Piano Keys Divider 40px) giữa Hero & Stats --- */
+body.elise-v3 .elise-piano-keys-wrap .section-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.elise-v3 .elise-piano-keys {
+  display: block !important;
+  height: 40px !important;
+  width: 100% !important;
+  background-color: #111;
+  background-image:
+    linear-gradient(180deg, #f3e4b0 0%, #c9a84c 45%, #7a5c22 100%),
+    linear-gradient(#111, #111),
+    linear-gradient(#111, #111),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 18px,
+      #111 18px 30px,
+      transparent 30px 42px,
+      #111 42px 54px,
+      transparent 54px 90px,
+      #111 90px 102px,
+      transparent 102px 114px,
+      #111 114px 126px,
+      transparent 126px 138px,
+      #111 138px 150px,
+      transparent 150px 168px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #e4d2b8 0 23px,
+      #1a1510 23px 24px
+    );
+  background-size: 100% 3px, 6px 100%, 6px 100%, 168px 18px, 24px 28px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat-x, repeat-x;
+  background-position: 0 0, 0 0, 100% 0, 0 12px, 0 12px;
+}

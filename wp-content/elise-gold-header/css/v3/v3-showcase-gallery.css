@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Elise v3: Section 14 (Học Viên Tiêu Biểu) & Section 15 (Thư Viện Concert)
+   Scope: body.elise-v3 | Constraint: <= 150 lines
+   ========================================================================== */
+
+/* --- Section 14: Học viên tiêu biểu (8 Videos) --- */
+body.elise-v3 .elise-s14 {
+  background-color: #0e0d0b !important;
+}
+
+body.elise-v3 .elise-s14-video-grid {
+  margin-bottom: 24px;
+}
+
+body.elise-v3 .elise-s14-video-card {
+  background: #161410;
+  border: 1px solid rgba(200, 162, 90, 0.25);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+}
+
+body.elise-v3 .elise-s14-video-card:hover {
+  transform: translateY(-4px);
+  border-color: #c8a25a;
+}
+
+body.elise-v3 .elise-s14-video-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
+body.elise-v3 .elise-s14-cap {
+  padding: 12px 14px;
+  margin: 0;
+  font-size: 13px;
+  color: rgba(251, 249, 245, 0.85);
+  text-align: center;
+  font-weight: 500;
+  border-top: 1px solid rgba(200, 162, 90, 0.15);
+}
+
+/* --- Section 15: Thư viện concert & hoạt động --- */
+body.elise-v3 .elise-s15 {
+  background-color: #fbf9f5 !important;
+}
+
+body.elise-v3 .elise-s15-item {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 162, 90, 0.25);
+  box-shadow: 0 6px 20px rgba(14, 13, 11, 0.05);
+  margin-bottom: 20px;
+}
+
+body.elise-v3 .elise-s15-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+body.elise-v3 .elise-s15-item:hover .elise-s15-img img {
+  transform: scale(1.05);
+}
+
+body.elise-v3 .elise-s15-overlay-cap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 14px 10px 14px;
+  background: linear-gradient(to top, rgba(14, 13, 11, 0.85), transparent);
+  color: #fbf9f5;
+  font-size: 12.5px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
