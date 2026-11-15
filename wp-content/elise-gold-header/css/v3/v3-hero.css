@@ -7,21 +7,21 @@ body.elise-v3 #main .content-area > .section:first-of-type {
   padding-top: 0 !important; background-color: #000000 !important;
 }
 
-body.elise-v3 .banner.elise-hero-right {
-  background-color: #000000 !important; min-height: 760px !important; padding-top: 0 !important; position: relative !important;
+body.elise-v3 .banner.elise-hero-right,
+body.elise-v3.elise-v2-1 .banner.elise-hero-right {
+  background-color: #000000 !important; min-height: 760px !important;
+  padding-top: 0 !important; position: relative !important;
+  width: 100% !important; max-width: 100% !important; margin: 0 !important;
 }
 
 body.elise-v3 .banner.elise-hero-right .banner-layers,
 body.elise-v3 .banner.elise-hero-right .banner-layers.container {
-  width: 100% !important; max-width: 100% !important;
-  margin: 0 !important; padding: 0 !important;
+  width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important;
   position: absolute !important; top: 0; left: 0; right: 0; bottom: 0;
 }
 
 body.elise-v3 .banner.elise-hero-right .bg,
-body.elise-v3.elise-v2-1 .banner.elise-hero-right .bg.bg-loaded {
-  background-position: 22% 50% !important;
-}
+body.elise-v3.elise-v2-1 .banner.elise-hero-right .bg.bg-loaded { background-position: right 50% !important; }
 
 body.elise-v3 .banner.elise-hero-right .overlay,
 body.elise-v2-1.elise-v3 .banner.elise-hero-right .overlay {
@@ -35,7 +35,7 @@ body.elise-v2-1.elise-v3 .banner.elise-hero-right .overlay {
 /* Định vị cụm chữ Desktop: Căn giữa dọc, neo an toàn bên trái không bị lệch đè đàn */
 body.elise-v3 .banner.elise-hero-right .text-box {
   position: absolute !important; top: 50% !important;
-  left: max(40px, calc((100vw - 1200px) / 2)) !important;
+  left: clamp(40px, calc((100vw - 1200px) / 2), 160px) !important;
   bottom: auto !important; transform: translateY(-50%) !important;
   width: auto !important; max-width: 500px !important;
   padding: 0 20px 0 0 !important; margin: 0 !important; z-index: 2 !important;
