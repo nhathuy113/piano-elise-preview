@@ -107,27 +107,28 @@ body.elise-v3 a.button.is-outline.elise-btn-gold-outline:hover {
 /* Mobile: Chuẩn 1:1 Mockup (Full-width CTA dưới đáy, bé & đàn lộ rõ bên phải) */
 @media (max-width: 600px) {
   body.elise-v3 .banner.elise-hero-right {
-    min-height: 470px !important; height: 470px !important;
+    min-height: 530px !important; height: 530px !important;
   }
   body.elise-v3 .banner.elise-hero-right .bg,
   body.elise-v3 .banner.elise-hero-right .bg.bg-loaded {
-    background-position: 75% 35% !important;
+    background-position: 75% 20% !important;
   }
   body.elise-v3 .banner.elise-hero-right .overlay {
-    background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.95) 44%, rgba(0,0,0,0.55) 60%, transparent 78%) !important;
+    background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.95) 44%, rgba(0,0,0,0.5) 60%, transparent 78%) !important;
   }
   body.elise-v3 .banner.elise-hero-right .text-box {
     position: absolute !important; top: 0 !important; left: 0 !important;
     right: 0 !important; bottom: 0 !important; width: 100% !important;
     max-width: 100% !important; height: 100% !important;
-    padding: 100px 16px 16px 16px !important; display: flex !important;
-    flex-direction: column !important; box-sizing: border-box !important;
+    padding: 118px 16px 20px 16px !important; box-sizing: border-box !important;
   }
+  body.elise-v3 .banner.elise-hero-right .text-box-content,
   body.elise-v3 .banner.elise-hero-right .text-box .text-inner {
     display: flex !important; flex-direction: column !important;
     height: 100% !important; justify-content: space-between !important;
   }
-  body.elise-v3 .banner.elise-hero-right .text-box .elise-eyebrow {
+  body.elise-v3 .banner.elise-hero-right .text-box .elise-eyebrow,
+  body.elise-v3 .banner.elise-hero-right .text-box #text-2696206408 {
     font-size: 9.5px !important; letter-spacing: 0.12em !important;
     margin-bottom: 4px !important; max-width: 58% !important;
   }
@@ -142,7 +143,7 @@ body.elise-v3 a.button.is-outline.elise-btn-gold-outline:hover {
   body.elise-v3 .banner.elise-hero-right .text-box a.elise-btn-gold {
     width: 100% !important; max-width: 100% !important;
     margin-top: auto !important; margin-bottom: 0 !important;
-    padding: 13px 20px !important; border-radius: 8px !important;
+    padding: 14px 20px !important; border-radius: 8px !important;
     font-size: 0.95rem !important; font-weight: 700 !important;
     text-align: center !important; justify-content: center !important;
   }
