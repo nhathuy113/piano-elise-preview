@@ -4,120 +4,97 @@
    ========================================================================== */
 
 body.elise-v3 {
-  background-color: #0b0a08 !important;
-  color: #38342d;
+  background-color: #0b0a08 !important; color: #38342d;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-body.elise-v3 h1,
-body.elise-v3 h2,
-body.elise-v3 h3,
-body.elise-v3 h4 {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-weight: 400;
+body.elise-v3 h1, body.elise-v3 h2, body.elise-v3 h3, body.elise-v3 h4 {
+  font-family: "Georgia", "Times New Roman", serif; font-weight: 400;
   letter-spacing: -0.01em;
 }
 
 /* --- Typography Tokens --- */
 body.elise-v3 .elise-v3-section-tag p {
-  color: #c8a25a !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.22em !important;
-  text-transform: uppercase !important;
+  color: #c8a25a !important; font-size: 12px !important; font-weight: 700 !important;
+  letter-spacing: 0.22em !important; text-transform: uppercase !important;
   margin-bottom: 12px !important;
 }
 
-/* --- Stats Section --- */
+/* --- Stats Section Desktop --- */
 body.elise-v3 .elise-v3-stats-sec {
   border-top: 1px solid rgba(200, 162, 90, 0.15);
   border-bottom: 1px solid rgba(200, 162, 90, 0.15);
 }
 
 body.elise-v3 .elise-v3-stat h3 {
-  color: #c8a25a !important;
-  font-size: 38px !important;
-  line-height: 1 !important;
-  margin-bottom: 6px !important;
-  font-weight: 500;
+  color: #c8a25a !important; font-size: 38px !important;
+  line-height: 1 !important; margin-bottom: 6px !important; font-weight: 500;
 }
 
 body.elise-v3 .elise-v3-stat p {
-  color: rgba(251, 249, 245, 0.75) !important;
-  font-size: 13px !important;
-  letter-spacing: 0.06em;
-  margin: 0;
-  text-transform: uppercase;
+  color: rgba(251, 249, 245, 0.75) !important; font-size: 13px !important;
+  letter-spacing: 0.06em; margin: 0; text-transform: uppercase;
 }
 
-/* --- Stats Bar: Vạch chia dọc thanh mảnh giữa các cột (Ảnh 6) --- */
-body.elise-v3 .elise-v3-stats-sec .row-divided > .col {
-  position: relative;
-}
-
-body.elise-v3 .elise-v3-stats-sec .row-divided > .col + .col {
-  border-left: 0 !important;
-}
-
+body.elise-v3 .elise-v3-stats-sec .row-divided > .col { position: relative; }
+body.elise-v3 .elise-v3-stats-sec .row-divided > .col + .col { border-left: 0 !important; }
 body.elise-v3 .elise-v3-stats-sec .row-divided > .col + .col::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 16%;
-  height: 68%;
-  width: 1px;
+  content: ""; position: absolute; left: 0; top: 16%; height: 68%; width: 1px;
   background: rgba(200, 162, 90, 0.25);
 }
 
 @media (max-width: 848px) {
-  body.elise-v3 .elise-v3-stats-sec .row-divided > .col + .col::before {
-    display: none;
-  }
+  body.elise-v3 .elise-v3-stats-sec .row-divided > .col + .col::before { display: none; }
 }
 
-/* --- Triệt tiêu thanh đỏ bung ngang (.phone-bar) & thu gọn 5 nút liên hệ --- */
-#button-contact-vr .phone-bar,
-#button-contact-vr .phone-bar a,
-.phone-bar,
-.phone-bar a {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
+/* Stats 2x2 Boxed Grid Chuẩn Mockup Mobile */
+@media (max-width: 767px) {
+  body.elise-v3 .elise-v3-stats-sec { padding: 18px 0 !important; }
+  body.elise-v3 .elise-v3-stats-sec .elise-v3-stats-row {
+    border: 1px solid rgba(200, 162, 90, 0.25) !important;
+    border-radius: 8px !important; background: rgba(18, 17, 14, 0.5) !important;
+    margin: 0 16px !important; overflow: hidden !important;
+  }
+  body.elise-v3 .elise-v3-stats-sec .elise-v3-stats-row > .col {
+    padding: 16px 8px !important;
+  }
+  body.elise-v3 .elise-v3-stats-sec .elise-v3-stats-row > .col:nth-child(1),
+  body.elise-v3 .elise-v3-stats-sec .elise-v3-stats-row > .col:nth-child(2) {
+    border-bottom: 1px solid rgba(200, 162, 90, 0.25) !important;
+  }
+  body.elise-v3 .elise-v3-stats-sec .elise-v3-stats-row > .col:nth-child(odd) {
+    border-right: 1px solid rgba(200, 162, 90, 0.25) !important;
+  }
+  body.elise-v3 .elise-v3-stat h3 { font-size: 28px !important; margin-bottom: 2px !important; }
+  body.elise-v3 .elise-v3-stat p { font-size: 11px !important; line-height: 1.25 !important; }
+}
+
+/* --- Triệt tiêu thanh đỏ bung ngang (.phone-bar) & thu gọn nút liên hệ --- */
+#button-contact-vr .phone-bar, .phone-bar, .phone-bar a {
+  display: none !important; visibility: hidden !important; width: 0 !important;
+  height: 0 !important; overflow: hidden !important; pointer-events: none !important;
 }
 
 #button-contact-vr {
-  position: fixed !important;
-  bottom: 20px !important;
-  left: 10px !important;
-  z-index: 999 !important;
-  transform: scale(0.72) !important;
-  transform-origin: bottom left !important;
+  position: fixed !important; bottom: 20px !important; left: 10px !important;
+  z-index: 999 !important; transform: scale(0.72) !important; transform-origin: bottom left !important;
 }
 
-/* --- Container & Safe Horizontal Gutters (Padding 2 bên & Tránh đè nút liên hệ) --- */
+/* --- Container & Safe Horizontal Gutters --- */
 body.elise-v3 #main .content-area > .section:not(:first-of-type):not(.elise-piano-keys-wrap) > .section-content {
-  max-width: 1220px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 85px !important;
-  padding-right: 85px !important;
-  box-sizing: border-box;
+  max-width: 1220px; margin-left: auto; margin-right: auto;
+  padding-left: 85px !important; padding-right: 85px !important; box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
   body.elise-v3 #main .content-area > .section:not(:first-of-type):not(.elise-piano-keys-wrap) > .section-content {
-    padding-left: 80px !important;
-    padding-right: 32px !important;
+    padding-left: 80px !important; padding-right: 32px !important;
   }
 }
 
 @media (max-width: 767px) {
   body.elise-v3 #main .content-area > .section:not(:first-of-type):not(.elise-piano-keys-wrap) > .section-content {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 16px !important; padding-right: 16px !important;
   }
 }
