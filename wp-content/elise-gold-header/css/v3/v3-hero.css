@@ -22,27 +22,27 @@ body.elise-v3 .banner.elise-hero-right .overlay,
 body.elise-v2-1.elise-v3 .banner.elise-hero-right .overlay {
   display: block !important; opacity: 1 !important;
   position: absolute !important; top: 0; left: 0; right: 0; bottom: 0;
-  width: 100% !important; height: 100% !important;
-  background-color: transparent !important;
+  width: 100% !important; height: 100% !important; background-color: transparent !important;
   background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.92) 20%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.1) 35%, transparent 40%), linear-gradient(180deg, rgba(0,0,0,0.85) 0%, transparent 22%) !important;
   pointer-events: none !important; z-index: 1 !important;
 }
 
-/* Định vị cụm chữ Desktop */
+/* Định vị cụm chữ Desktop: Căn giữa dọc, neo chuẩn mép container không bị lệch */
 body.elise-v3 .banner.elise-hero-right .text-box {
-  position: absolute !important; top: 0 !important; left: 0 !important;
-  bottom: auto !important; transform: none !important;
-  width: 55% !important; max-width: 580px !important;
-  padding: 155px 20px 0 max(32px, calc((100vw - 1180px) / 2)) !important;
-  margin: 0 !important; z-index: 2 !important;
+  position: absolute !important; top: calc(50% + 25px) !important;
+  left: max(32px, calc((100vw - 1200px) / 2)) !important;
+  bottom: auto !important; transform: translateY(-50%) !important;
+  width: auto !important; max-width: 520px !important;
+  padding: 0 20px 0 0 !important; margin: 0 !important; z-index: 2 !important;
 }
 
 body.elise-v3 .banner.elise-hero-right .text-box .text-inner { padding: 0 !important; }
 
+/* Text Shadow mềm mại, tự nhiên, chống gắt */
 body.elise-v3 .banner.elise-hero-right .text-box .elise-eyebrow,
 body.elise-v3 .banner.elise-hero-right .text-box .elise-hero-title,
 body.elise-v3 .banner.elise-hero-right .text-box p {
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95), 0 4px 18px rgba(0, 0, 0, 0.95) !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45), 0 8px 26px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Typography Desktop */
@@ -54,10 +54,8 @@ body.elise-v3 .elise-hero-title {
 }
 
 body.elise-v3 .elise-hero-title em {
-  font-style: italic;
-  background: linear-gradient(105deg, #c4a035, #f3e4b0, #c9a84c);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-style: italic; background: linear-gradient(105deg, #c4a035, #f3e4b0, #c9a84c);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 
 /* Nút CTA Desktop */
@@ -66,8 +64,7 @@ body.elise-v3 .banner.elise-hero-right .text-box .button {
   width: fit-content !important; max-width: 290px !important;
   margin: 12px 0 0 0 !important; border-radius: 999px !important;
   padding: 11px 26px !important; font-size: 0.95rem !important;
-  text-transform: none !important; letter-spacing: 0.02em !important;
-  white-space: nowrap !important;
+  text-transform: none !important; letter-spacing: 0.02em !important; white-space: nowrap !important;
 }
 
 body.elise-v3 .banner.elise-hero-right .text-box a.elise-btn-gold {
@@ -100,40 +97,39 @@ body.elise-v3 a.button.is-outline.elise-btn-gold-outline:hover {
     background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.92) 32%, rgba(0,0,0,0.5) 48%, transparent 65%) !important;
   }
   body.elise-v3 .banner.elise-hero-right .text-box {
-    width: 55% !important; max-width: 420px !important; padding: 130px 16px 0 24px !important;
+    left: 24px !important; width: 55% !important; max-width: 420px !important;
   }
 }
 
-/* Mobile: Chuẩn 1:1 Mockup (Full-width CTA dưới đáy, bé & đàn lộ rõ bên phải) */
+/* Mobile: Căn giữa dọc, tỷ lệ hài hòa, nút full-width, không bị lệch */
 @media (max-width: 600px) {
   body.elise-v3 .banner.elise-hero-right {
-    min-height: 530px !important; height: 530px !important;
+    min-height: 480px !important; height: 480px !important;
   }
   body.elise-v3 .banner.elise-hero-right .bg,
   body.elise-v3 .banner.elise-hero-right .bg.bg-loaded {
-    background-position: 75% 20% !important;
+    background-position: 75% 25% !important;
   }
   body.elise-v3 .banner.elise-hero-right .overlay {
-    background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.95) 44%, rgba(0,0,0,0.5) 60%, transparent 78%) !important;
+    background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.92) 42%, rgba(0,0,0,0.5) 60%, transparent 80%) !important;
   }
   body.elise-v3 .banner.elise-hero-right .text-box {
-    position: absolute !important; top: 0 !important; left: 0 !important;
-    right: 0 !important; bottom: 0 !important; width: 100% !important;
-    max-width: 100% !important; height: 100% !important;
-    padding: 118px 16px 20px 16px !important; box-sizing: border-box !important;
+    position: absolute !important; top: calc(50% + 24px) !important;
+    left: 0 !important; right: 0 !important; bottom: auto !important;
+    transform: translateY(-50%) !important; width: 100% !important;
+    max-width: 100% !important; height: auto !important;
+    padding: 0 16px !important; display: block !important; box-sizing: border-box !important;
   }
-  body.elise-v3 .banner.elise-hero-right .text-box-content,
   body.elise-v3 .banner.elise-hero-right .text-box .text-inner {
-    display: flex !important; flex-direction: column !important;
-    height: 100% !important; justify-content: space-between !important;
+    display: block !important; height: auto !important;
   }
   body.elise-v3 .banner.elise-hero-right .text-box .elise-eyebrow,
   body.elise-v3 .banner.elise-hero-right .text-box #text-2696206408 {
-    font-size: 9.5px !important; letter-spacing: 0.12em !important;
-    margin-bottom: 4px !important; max-width: 58% !important;
+    font-size: 10px !important; letter-spacing: 0.12em !important;
+    margin-bottom: 6px !important; max-width: 58% !important;
   }
   body.elise-v3 .elise-hero-title {
-    font-size: 1.45rem !important; line-height: 1.18 !important;
+    font-size: 1.5rem !important; line-height: 1.18 !important;
     margin: 0 !important; max-width: 58% !important;
   }
   body.elise-v3 .banner.elise-hero-right .text-box p,
@@ -142,9 +138,8 @@ body.elise-v3 a.button.is-outline.elise-btn-gold-outline:hover {
   }
   body.elise-v3 .banner.elise-hero-right .text-box a.elise-btn-gold {
     width: 100% !important; max-width: 100% !important;
-    margin-top: auto !important; margin-bottom: 0 !important;
-    padding: 14px 20px !important; border-radius: 8px !important;
-    font-size: 0.95rem !important; font-weight: 700 !important;
-    text-align: center !important; justify-content: center !important;
+    margin: 18px 0 0 0 !important; padding: 13px 20px !important;
+    border-radius: 8px !important; font-size: 0.95rem !important;
+    font-weight: 700 !important; text-align: center !important; justify-content: center !important;
   }
 }
