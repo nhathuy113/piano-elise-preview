@@ -113,23 +113,23 @@ body.elise-v3 a.button.is-outline.elise-btn-gold-outline:hover {
 /* Mobile Template 1: Tinh gọn, hiển thị rõ bé & đàn, không bị che khuất */
 @media (max-width: 600px) {
   body.elise-v3 .banner.elise-hero-right {
-    min-height: 440px !important;
+    min-height: 480px !important;
   }
   body.elise-v3 .banner.elise-hero-right .bg,
   body.elise-v3 .banner.elise-hero-right .bg.bg-loaded {
-    background-position: 72% 35% !important;
+    background-position: 72% 40% !important;
   }
   body.elise-v3 .banner.elise-hero-right .overlay {
-    background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.95) 46%, rgba(0,0,0,0.5) 62%, transparent 80%) !important;
+    background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.95) 42%, rgba(0,0,0,0.6) 58%, transparent 75%) !important;
   }
   body.elise-v3 .banner.elise-hero-right .text-box {
-    width: 60% !important; max-width: 250px !important; padding: 88px 10px 0 16px !important;
+    width: 62% !important; max-width: 260px !important; padding: 112px 10px 0 16px !important;
   }
   body.elise-v3 .banner.elise-hero-right .text-box .elise-eyebrow {
-    font-size: 10px !important; letter-spacing: 0.14em !important; margin-bottom: 4px !important;
+    font-size: 9.5px !important; letter-spacing: 0.12em !important; margin-bottom: 6px !important;
   }
   body.elise-v3 .elise-hero-title {
-    font-size: 1.55rem !important; line-height: 1.18 !important; margin: 0.15em 0 0.35em !important;
+    font-size: 1.5rem !important; line-height: 1.16 !important; margin: 0.15em 0 0.35em !important;
   }
   /* Ẩn đoạn mô tả dài và nút outline để hero thoáng đãng chuẩn Mockup Mobile */
   body.elise-v3 .banner.elise-hero-right .text-box p {
@@ -139,8 +139,8 @@ body.elise-v3 a.button.is-outline.elise-btn-gold-outline:hover {
     display: none !important;
   }
   body.elise-v3 .banner.elise-hero-right .text-box .button {
-    width: 100% !important; max-width: 210px !important;
-    padding: 10px 16px !important; font-size: 0.88rem !important;
-    margin: 12px 0 0 0 !important;
+    width: 100% !important; max-width: 220px !important;
+    padding: 10px 18px !important; font-size: 0.88rem !important;
+    margin: 14px 0 0 0 !important;
   }
 }
