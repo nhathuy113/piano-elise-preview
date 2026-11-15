@@ -14,14 +14,14 @@ body.elise-v3 .banner.elise-hero-right {
   position: relative !important;
 }
 
-/* Định vị ảnh đàn & bé chuẩn như v2.1, giữ trọn ánh sáng sân khấu tự nhiên */
+/* Định vị ảnh đàn & bé chuẩn desktop v2.1, giữ trọn ánh sáng tự nhiên */
 body.elise-v3 .banner.elise-hero-right .bg,
 body.elise-v3 .banner.elise-hero-right .bg.bg-loaded,
 body.elise-v2-1.elise-v3 .banner.elise-hero-right .bg.bg-loaded {
   background-position: 22% 50% !important;
 }
 
-/* Dark Gradient: Phủ đen sau cụm chữ, trả lại ánh sáng tự nhiên cho bé & đàn */
+/* Dark Gradient: Phủ đen sau cụm chữ, trả lại ánh sáng cho bé & đàn */
 body.elise-v3 .banner.elise-hero-right .overlay,
 body.elise-v2-1.elise-v3 .banner.elise-hero-right .overlay {
   display: block !important; opacity: 1 !important;
@@ -32,7 +32,7 @@ body.elise-v2-1.elise-v3 .banner.elise-hero-right .overlay {
   pointer-events: none !important; z-index: 1 !important;
 }
 
-/* Định vị cụm chữ: Neo cố định dưới header, có lề an toàn chống dính mép */
+/* Định vị cụm chữ Desktop: Neo cố định dưới header, có lề an toàn */
 body.elise-v3 .banner.elise-hero-right .text-box {
   position: absolute !important; top: 0 !important; left: 0 !important;
   bottom: auto !important; transform: none !important;
@@ -50,22 +50,6 @@ body.elise-v3 .banner.elise-hero-right .text-box p {
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95), 0 4px 18px rgba(0, 0, 0, 0.95) !important;
 }
 
-@media (max-width: 849px) {
-  body.elise-v3 .banner.elise-hero-right { min-height: 640px !important; }
-  body.elise-v3 .banner.elise-hero-right .overlay {
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.65) 45%, rgba(0,0,0,0.15) 75%, transparent 100%), linear-gradient(90deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, transparent 75%) !important;
-  }
-  body.elise-v3 .banner.elise-hero-right .text-box {
-    width: 60% !important; max-width: 440px !important; padding: 135px 20px 0 24px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  body.elise-v3 .banner.elise-hero-right .text-box {
-    width: 100% !important; max-width: 100% !important; padding: 110px 20px 0 20px !important;
-  }
-}
-
 /* Hero Typography */
 body.elise-v3 .elise-hero-title {
   font-family: Georgia, "Times New Roman", serif !important;
@@ -81,7 +65,7 @@ body.elise-v3 .elise-hero-title em {
   -webkit-text-fill-color: transparent;
 }
 
-/* Hai nút CTA xếp dọc, nằm trọn trên nền đen bên trái, không đè lên váy bé */
+/* Nút CTA Desktop: Xếp dọc trên nền đen, nút outline có nền kính tối */
 body.elise-v3 .banner.elise-hero-right .text-box .button {
   display: flex !important; align-items: center; justify-content: center;
   width: fit-content !important; max-width: 290px !important;
@@ -103,7 +87,6 @@ body.elise-v3 a.button.elise-btn-gold:hover {
   box-shadow: 0 6px 26px rgba(196, 160, 53, 0.55) !important;
 }
 
-/* Nền kính đen mờ cho nút outline: Luôn có nền tối bảo vệ chữ trên mọi nền */
 body.elise-v3 .banner.elise-hero-right .text-box a.elise-btn-gold-outline {
   min-width: 0 !important; width: auto !important;
   background: rgba(0, 0, 0, 0.75) !important;
@@ -116,8 +99,48 @@ body.elise-v3 a.button.is-outline.elise-btn-gold-outline:hover {
   border-color: #f3e4b0 !important; color: #f3e4b0 !important; transform: translateY(-2px);
 }
 
+/* Tablet (849px) */
+@media (max-width: 849px) {
+  body.elise-v3 .banner.elise-hero-right { min-height: 580px !important; }
+  body.elise-v3 .banner.elise-hero-right .overlay {
+    background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.92) 32%, rgba(0,0,0,0.5) 48%, transparent 65%) !important;
+  }
+  body.elise-v3 .banner.elise-hero-right .text-box {
+    width: 55% !important; max-width: 420px !important; padding: 130px 16px 0 24px !important;
+  }
+}
+
+/* Mobile Template 1: Tinh gọn, hiển thị rõ bé & đàn, không bị che khuất */
 @media (max-width: 600px) {
+  body.elise-v3 .banner.elise-hero-right {
+    min-height: 440px !important;
+  }
+  body.elise-v3 .banner.elise-hero-right .bg,
+  body.elise-v3 .banner.elise-hero-right .bg.bg-loaded {
+    background-position: 72% 35% !important;
+  }
+  body.elise-v3 .banner.elise-hero-right .overlay {
+    background-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.95) 46%, rgba(0,0,0,0.5) 62%, transparent 80%) !important;
+  }
+  body.elise-v3 .banner.elise-hero-right .text-box {
+    width: 60% !important; max-width: 250px !important; padding: 88px 10px 0 16px !important;
+  }
+  body.elise-v3 .banner.elise-hero-right .text-box .elise-eyebrow {
+    font-size: 10px !important; letter-spacing: 0.14em !important; margin-bottom: 4px !important;
+  }
+  body.elise-v3 .elise-hero-title {
+    font-size: 1.55rem !important; line-height: 1.18 !important; margin: 0.15em 0 0.35em !important;
+  }
+  /* Ẩn đoạn mô tả dài và nút outline để hero thoáng đãng chuẩn Mockup Mobile */
+  body.elise-v3 .banner.elise-hero-right .text-box p {
+    display: none !important;
+  }
+  body.elise-v3 .banner.elise-hero-right .text-box a.elise-btn-gold-outline {
+    display: none !important;
+  }
   body.elise-v3 .banner.elise-hero-right .text-box .button {
-    display: flex !important; width: 100% !important; max-width: 320px !important; margin: 8px 0 !important;
+    width: 100% !important; max-width: 210px !important;
+    padding: 10px 16px !important; font-size: 0.88rem !important;
+    margin: 12px 0 0 0 !important;
   }
 }
